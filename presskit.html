@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Press Kit — DARRYL RED</title>
+<meta name="description" content="Official press kit for DARRYL RED — bio, quick facts, downloadable assets and booking contact.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="atmosphere" aria-hidden="true">
+  <div class="blob blob--a" style="right:-14vw; left:auto; top:-8vw;"></div>
+  <div class="blob blob--b" style="left:-10vw; right:auto;"></div>
+  <div class="blob blob--c"></div>
+  <svg class="grain" width="100%" height="100%">
+    <filter id="grainFilter3"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch"></feTurbulence></filter>
+    <rect width="100%" height="100%" filter="url(#grainFilter3)"></rect>
+  </svg>
+  <div class="vignette"></div>
+</div>
+
+<nav class="nav">
+  <a href="index.html" class="nav-mark" data-logo-slot>
+    <span data-bind="artist.stageName"></span>
+    <span class="nav-dot"></span>
+  </a>
+  <div class="nav-links">
+    <a href="index.html#about">About</a>
+    <a href="index.html#genres">Genres</a>
+    <a href="index.html#gigs">Gigs</a>
+    <a href="shows.html">Shows</a>
+    <a href="presskit.html" class="is-active">Press Kit</a>
+  </div>
+  <a href="presskit.html#contact" class="nav-cta">Book / Contact</a>
+</nav>
+
+<header class="pk-hero">
+  <div class="wrap">
+    <p class="hero-eyebrow"><span class="pulse"></span> Press kit</p>
+    <h1><span class="accent-word" data-bind="artist.stageName"></span></h1>
+    <p class="hero-sub" data-bind="artist.tagline" style="margin-top:18px;"></p>
+  </div>
+</header>
+
+<section class="section" style="padding-top:10px;">
+  <div class="wrap">
+    <div class="pk-grid">
+
+      <div class="pk-card">
+        <h3>Short bio</h3>
+        <p class="big-quote" data-bind="pressKit.shortBio"></p>
+      </div>
+
+      <div class="pk-card">
+        <h3>Quick facts</h3>
+        <ul class="contact-list" data-pk-facts></ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0;">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Full bio</h2>
+      <span class="section-tag">For programme notes, articles &amp; event marketing</span>
+    </div>
+    <div class="about-copy" data-longbio style="max-width:78ch;"></div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0;">
+  <div class="wrap">
+    <div class="pk-grid">
+
+      <div class="pk-card">
+        <h3>Downloadable assets</h3>
+        <div data-pk-assets></div>
+        <p style="margin-top:16px; font-size:0.82rem; color:var(--muted-2);">Add your logo and press photo to the <code style="color:var(--accent-3)">/assets</code> folder — see EDIT-ME.md.</p>
+      </div>
+
+      <div class="pk-card">
+        <h3>Technical rider</h3>
+        <p class="rider-note" data-bind="pressKit.riderNote"></p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section" id="contact" style="padding-top:0;">
+  <div class="wrap">
+    <div class="pk-card" style="max-width:560px;">
+      <h3>Booking &amp; contact</h3>
+      <ul class="contact-list" data-pk-contact></ul>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap" style="display:flex; justify-content:space-between; align-items:flex-end; gap:24px; flex-wrap:wrap; width:100%;">
+    <div>
+      <div class="footer-mark" data-bind="artist.stageName"></div>
+      <div>© <span data-year></span> — all rights reserved</div>
+    </div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="shows.html">Shows</a>
+      <a href="presskit.html">Press Kit</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/content.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

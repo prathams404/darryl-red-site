@@ -1,0 +1,1 @@
+This folder is for your images (logo.png, press-photo.jpg, any venue logo PNGs). See ../EDIT-ME.md for how to point content.js at files you add here.

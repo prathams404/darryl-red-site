@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DARRYL RED — DJ, Bengaluru</title>
+<meta name="description" content="DARRYL RED is a Bengaluru-based DJ playing Commercial, UKG, DNB, House and Bass — from SOCIAL and festival stages to HYROX Bengaluru, TCS Marathon and corporate events.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Atmosphere: fixed glow blobs + grain, sits behind all content -->
+<div class="atmosphere" aria-hidden="true">
+  <div class="blob blob--a"></div>
+  <div class="blob blob--b"></div>
+  <div class="blob blob--c"></div>
+  <svg class="grain" width="100%" height="100%">
+    <filter id="grainFilter"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch"></feTurbulence></filter>
+    <rect width="100%" height="100%" filter="url(#grainFilter)"></rect>
+  </svg>
+  <div class="vignette"></div>
+</div>
+
+<nav class="nav">
+  <a href="index.html" class="nav-mark" data-logo-slot>
+    <span data-bind="artist.stageName"></span>
+    <span class="nav-dot"></span>
+  </a>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#genres">Genres</a>
+    <a href="#gigs">Gigs</a>
+    <a href="#shows">Shows</a>
+    <a href="presskit.html">Press Kit</a>
+  </div>
+  <a href="presskit.html#contact" class="nav-cta">Book / Contact</a>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <div class="wrap" style="width:100%;">
+    <p class="hero-eyebrow"><span class="pulse"></span> Bengaluru, India — booking nightlife &amp; live events</p>
+    <h1 class="hero-title">
+      <span class="reveal-line"><span>DARRYL</span></span>
+      <span class="reveal-line line2"><span>RED</span></span>
+    </h1>
+    <p class="hero-sub" data-bind="artist.heroLine"></p>
+    <div class="hero-actions">
+      <a href="#shows" class="btn btn-primary">See upcoming shows</a>
+      <a href="presskit.html" class="btn btn-ghost">View press kit</a>
+    </div>
+  </div>
+  <div class="hero-eq" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+  <div class="hero-meta">
+    <div><strong>Genres</strong>Commercial / UKG / DNB / House / Bass</div>
+    <div><strong>Based in</strong>Bengaluru</div>
+  </div>
+</header>
+
+<!-- ============ GENRE MARQUEE ============ -->
+<div class="marquee-band" id="genres">
+  <div class="marquee genres">
+    <div class="marquee-track" data-genre-track></div>
+  </div>
+</div>
+
+<!-- ============ ABOUT ============ -->
+<section class="section" id="about">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Every room has a peak.<br>Finding it is the job.</h2>
+      <span class="section-tag">About</span>
+    </div>
+    <div class="about-grid">
+      <div class="about-copy" data-longbio></div>
+      <div class="about-panel">
+        <h3>Where DARRYL RED plays best</h3>
+        <div data-strengths></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TRUSTED BY / LOGO MARQUEE ============ -->
+<div class="marquee-band">
+  <div class="section-tag" style="text-align:center; padding-bottom:14px; color:var(--muted-2);">Played at &amp; trusted by</div>
+  <div class="marquee">
+    <div class="marquee-track" data-logo-track></div>
+  </div>
+</div>
+
+<!-- ============ GIGS ============ -->
+<section class="section" id="gigs">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Gigs &amp; experience</h2>
+      <span class="section-tag">A track record built across nightlife, sport and corporate stages</span>
+    </div>
+    <div class="gig-list" data-gigs></div>
+  </div>
+</section>
+
+<!-- ============ UPCOMING SHOWS PREVIEW ============ -->
+<section class="section" id="shows">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Upcoming shows</h2>
+      <span class="section-tag">Full schedule on the shows page</span>
+    </div>
+    <div class="show-grid" data-shows-preview></div>
+    <div style="margin-top:36px; text-align:center;">
+      <a href="shows.html" class="btn btn-ghost">View full show calendar</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="cta-band">
+  <div class="wrap">
+    <h2>Bring the peak<br>to your event.</h2>
+    <div class="cta-actions">
+      <a href="presskit.html#contact" class="btn btn-primary">Book DARRYL RED</a>
+      <a href="presskit.html" class="btn btn-ghost">Download press kit</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap" style="display:flex; justify-content:space-between; align-items:flex-end; gap:24px; flex-wrap:wrap; width:100%;">
+    <div>
+      <div class="footer-mark" data-bind="artist.stageName"></div>
+      <div>© <span data-year></span> — all rights reserved</div>
+    </div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="shows.html">Shows</a>
+      <a href="presskit.html">Press Kit</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/content.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
